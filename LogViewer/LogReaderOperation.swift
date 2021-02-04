@@ -8,6 +8,30 @@
 import Foundation
 import Zip
 
+class LogReaderClient {
+    private let queue: OperationQueue
+    static let shared = LogReaderClient()
+    var logs: [Log]? = []
+    init() {
+        self.queue = OperationQueue()
+    }
+    
+    func fetchLogs(zipFileURLPath: URL, completionHandler: (([Log]?) -> Void)?) {
+        let operation = LogReaderOperation(zipFileURLPath: zipFileURLPath)
+        
+        operation.completionBlock = { [unowned self] in
+            DispatchQueue.main.async {
+                operation.logs?.forEach({ (log) in
+                    self.logs?.append(log)
+                })
+                completionHandler?(operation.logs)
+            }
+        }
+        
+        queue.addOperation(operation)
+    }
+}
+
 class LogReaderOperation: Operation {
     
     override var isAsynchronous: Bool { return true }
