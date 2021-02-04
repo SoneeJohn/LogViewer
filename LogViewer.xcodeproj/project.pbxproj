@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		0151E91025CBA80A003E6BB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0151E90E25CBA80A003E6BB8 /* Main.storyboard */; };
 		0151E91C25CBA80A003E6BB8 /* LogViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0151E91B25CBA80A003E6BB8 /* LogViewerTests.swift */; };
 		0151E92725CBA80A003E6BB8 /* LogViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0151E92625CBA80A003E6BB8 /* LogViewerUITests.swift */; };
+		0151E93825CBA8A1003E6BB8 /* LogReaderOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0151E93725CBA8A1003E6BB8 /* LogReaderOperation.swift */; };
+		0151E93E25CBA91B003E6BB8 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 0151E93D25CBA91B003E6BB8 /* Zip */; };
+		0151E94325CBB3C4003E6BB8 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0151E94225CBB3C4003E6BB8 /* Log.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,8 @@
 		0151E92225CBA80A003E6BB8 /* LogViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0151E92625CBA80A003E6BB8 /* LogViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewerUITests.swift; sourceTree = "<group>"; };
 		0151E92825CBA80A003E6BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0151E93725CBA8A1003E6BB8 /* LogReaderOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogReaderOperation.swift; sourceTree = "<group>"; };
+		0151E94225CBB3C4003E6BB8 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0151E93E25CBA91B003E6BB8 /* Zip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				0151E90825CBA808003E6BB8 /* AppDelegate.swift */,
+				0151E93725CBA8A1003E6BB8 /* LogReaderOperation.swift */,
+				0151E94225CBB3C4003E6BB8 /* Log.swift */,
 				0151E90A25CBA808003E6BB8 /* ViewController.swift */,
 				0151E90C25CBA80A003E6BB8 /* Assets.xcassets */,
 				0151E90E25CBA80A003E6BB8 /* Main.storyboard */,
@@ -140,6 +148,9 @@
 			dependencies = (
 			);
 			name = LogViewer;
+			packageProductDependencies = (
+				0151E93D25CBA91B003E6BB8 /* Zip */,
+			);
 			productName = LogViewer;
 			productReference = 0151E90525CBA808003E6BB8 /* LogViewer.app */;
 			productType = "com.apple.product-type.application";
@@ -211,6 +222,9 @@
 				Base,
 			);
 			mainGroup = 0151E8FC25CBA808003E6BB8;
+			packageReferences = (
+				0151E93C25CBA91B003E6BB8 /* XCRemoteSwiftPackageReference "Zip" */,
+			);
 			productRefGroup = 0151E90625CBA808003E6BB8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -253,7 +267,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0151E93825CBA8A1003E6BB8 /* LogReaderOperation.swift in Sources */,
 				0151E90B25CBA808003E6BB8 /* ViewController.swift in Sources */,
+				0151E94325CBB3C4003E6BB8 /* Log.swift in Sources */,
 				0151E90925CBA808003E6BB8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,6 +590,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0151E93C25CBA91B003E6BB8 /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0151E93D25CBA91B003E6BB8 /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0151E93C25CBA91B003E6BB8 /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0151E8FD25CBA808003E6BB8 /* Project object */;
 }
