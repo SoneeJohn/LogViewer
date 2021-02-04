@@ -28,6 +28,7 @@ struct Log {
 @objcMembers class Calendar: NSObject {
     let name: String
     let identifier: String
+    let numberOfEvents: Int
     private let string: String
     init?(_ string: String) {
         guard let stringWithoutDate = string.split(separator: "\t").last else { return nil }
@@ -37,7 +38,9 @@ struct Log {
             return String(sub).trimmingCharacters(in: .whitespacesAndNewlines)
         }
         guard properties.count >= 2 else { return nil }
-        
+     
+        guard let numberOfEventsString = self.string.firstGroupMatch(for: #"count: (\d+)"#) else { return nil }
+        self.numberOfEvents = Int(numberOfEventsString) ?? 0
         self.name = properties[0]
         self.identifier = properties[1]
     }
@@ -111,6 +114,13 @@ extension String {
             print("Invalid regex: \(error.localizedDescription)")
             return []
         }
+    }
+    
+    func firstGroupMatch(for regexPattern: String, options: NSRegularExpression.Options = NSRegularExpression.Options()) -> String? {
+        let group = groups(for: regexPattern)
+        guard group.isEmpty == false else { return nil }
+        guard group[0].count >= 2 else { return nil }
+        return group[0][1]
     }
     
     func groups(for regexPattern: String, options: NSRegularExpression.Options = NSRegularExpression.Options()) -> [[String]] {
