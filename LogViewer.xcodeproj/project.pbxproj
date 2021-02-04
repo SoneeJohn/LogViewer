@@ -16,6 +16,11 @@
 		0151E93825CBA8A1003E6BB8 /* LogReaderOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0151E93725CBA8A1003E6BB8 /* LogReaderOperation.swift */; };
 		0151E93E25CBA91B003E6BB8 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 0151E93D25CBA91B003E6BB8 /* Zip */; };
 		0151E94325CBB3C4003E6BB8 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0151E94225CBB3C4003E6BB8 /* Log.swift */; };
+		0151E95325CC11E0003E6BB8 /* SourceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0151E95225CC11E0003E6BB8 /* SourceListViewController.swift */; };
+		0151E95825CC1DC7003E6BB8 /* DetailTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0151E95725CC1DC7003E6BB8 /* DetailTabViewController.swift */; };
+		0151E95D25CC201D003E6BB8 /* AccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0151E95C25CC201D003E6BB8 /* AccountDetailViewController.swift */; };
+		0151E96525CC2109003E6BB8 /* CalendarDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0151E96425CC2109003E6BB8 /* CalendarDetailViewController.swift */; };
+		0151E96A25CC2122003E6BB8 /* SyncQueueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0151E96925CC2122003E6BB8 /* SyncQueueDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		0151E92825CBA80A003E6BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0151E93725CBA8A1003E6BB8 /* LogReaderOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogReaderOperation.swift; sourceTree = "<group>"; };
 		0151E94225CBB3C4003E6BB8 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		0151E95225CC11E0003E6BB8 /* SourceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListViewController.swift; sourceTree = "<group>"; };
+		0151E95725CC1DC7003E6BB8 /* DetailTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTabViewController.swift; sourceTree = "<group>"; };
+		0151E95C25CC201D003E6BB8 /* AccountDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailViewController.swift; sourceTree = "<group>"; };
+		0151E96425CC2109003E6BB8 /* CalendarDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDetailViewController.swift; sourceTree = "<group>"; };
+		0151E96925CC2122003E6BB8 /* SyncQueueDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncQueueDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +116,11 @@
 				0151E93725CBA8A1003E6BB8 /* LogReaderOperation.swift */,
 				0151E94225CBB3C4003E6BB8 /* Log.swift */,
 				0151E90A25CBA808003E6BB8 /* ViewController.swift */,
+				0151E95225CC11E0003E6BB8 /* SourceListViewController.swift */,
+				0151E95725CC1DC7003E6BB8 /* DetailTabViewController.swift */,
+				0151E95C25CC201D003E6BB8 /* AccountDetailViewController.swift */,
+				0151E96425CC2109003E6BB8 /* CalendarDetailViewController.swift */,
+				0151E96925CC2122003E6BB8 /* SyncQueueDetailViewController.swift */,
 				0151E90C25CBA80A003E6BB8 /* Assets.xcassets */,
 				0151E90E25CBA80A003E6BB8 /* Main.storyboard */,
 				0151E91125CBA80A003E6BB8 /* Info.plist */,
@@ -270,7 +285,12 @@
 				0151E93825CBA8A1003E6BB8 /* LogReaderOperation.swift in Sources */,
 				0151E90B25CBA808003E6BB8 /* ViewController.swift in Sources */,
 				0151E94325CBB3C4003E6BB8 /* Log.swift in Sources */,
+				0151E95D25CC201D003E6BB8 /* AccountDetailViewController.swift in Sources */,
 				0151E90925CBA808003E6BB8 /* AppDelegate.swift in Sources */,
+				0151E96525CC2109003E6BB8 /* CalendarDetailViewController.swift in Sources */,
+				0151E96A25CC2122003E6BB8 /* SyncQueueDetailViewController.swift in Sources */,
+				0151E95325CC11E0003E6BB8 /* SourceListViewController.swift in Sources */,
+				0151E95825CC1DC7003E6BB8 /* DetailTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
