@@ -25,7 +25,7 @@ struct Log {
     }
 }
 
-struct Calendar {
+@objcMembers class Calendar: NSObject {
     let name: String
     let identifier: String
     private let string: String
@@ -43,7 +43,7 @@ struct Calendar {
     }
 }
 
-struct Account {
+@objcMembers class Account: NSObject {
     private let string: String
     let name: String
     let identifier: String
@@ -65,7 +65,7 @@ struct Account {
     }
 }
 
-struct SyncQueue {
+@objcMembers class SyncQueue: NSObject {
     let name: String
     let identifier: String
     private let string: String
