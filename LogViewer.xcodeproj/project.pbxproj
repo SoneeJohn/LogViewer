@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012EB20525CCB1040048EC79 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012EB20425CCB1040048EC79 /* MainWindowController.swift */; };
 		0151E90925CBA808003E6BB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0151E90825CBA808003E6BB8 /* AppDelegate.swift */; };
 		0151E90B25CBA808003E6BB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0151E90A25CBA808003E6BB8 /* ViewController.swift */; };
 		0151E90D25CBA80A003E6BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0151E90C25CBA80A003E6BB8 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		012EB20425CCB1040048EC79 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		0151E90525CBA808003E6BB8 /* LogViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0151E90825CBA808003E6BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0151E90A25CBA808003E6BB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				0151E95C25CC201D003E6BB8 /* AccountDetailViewController.swift */,
 				0151E96425CC2109003E6BB8 /* CalendarDetailViewController.swift */,
 				0151E96925CC2122003E6BB8 /* SyncQueueDetailViewController.swift */,
+				012EB20425CCB1040048EC79 /* MainWindowController.swift */,
 				0151E90C25CBA80A003E6BB8 /* Assets.xcassets */,
 				0151E90E25CBA80A003E6BB8 /* Main.storyboard */,
 				0151E91125CBA80A003E6BB8 /* Info.plist */,
@@ -286,6 +289,7 @@
 				0151E90B25CBA808003E6BB8 /* ViewController.swift in Sources */,
 				0151E94325CBB3C4003E6BB8 /* Log.swift in Sources */,
 				0151E95D25CC201D003E6BB8 /* AccountDetailViewController.swift in Sources */,
+				012EB20525CCB1040048EC79 /* MainWindowController.swift in Sources */,
 				0151E90925CBA808003E6BB8 /* AppDelegate.swift in Sources */,
 				0151E96525CC2109003E6BB8 /* CalendarDetailViewController.swift in Sources */,
 				0151E96A25CC2122003E6BB8 /* SyncQueueDetailViewController.swift in Sources */,
