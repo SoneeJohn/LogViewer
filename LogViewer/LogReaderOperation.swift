@@ -71,11 +71,20 @@ class LogReaderOperation: Operation {
         guard isFinished == false else { return }
         
         let directory = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(ProcessInfo.processInfo.globallyUniqueString)
-        guard ((try? Zip.unzipFile(zipFileURLPath, destination: directory, overwrite: false, password: nil)) != nil) else { return }
+        guard ((try? Zip.unzipFile(zipFileURLPath, destination: directory, overwrite: false, password: nil)) != nil) else {
+            finish(logs: nil)
+            return
+        }
         let logsDirectory = directory.appendingPathComponent("Logs")
         
-        guard let contents = try? FileManager.default.contentsOfDirectory(atPath: logsDirectory.path) else { return }
-        guard contents.contains("com.flexibits.fantastical2.mac") else { return }
+        guard let contents = try? FileManager.default.contentsOfDirectory(atPath: logsDirectory.path) else {
+            finish(logs: nil)
+            return
+        }
+        guard contents.contains("com.flexibits.fantastical2.mac") else {
+            finish(logs: nil)
+            return
+        }
         let mainAppLogDirectory = logsDirectory.appendingPathComponent("com.flexibits.fantastical2.mac")
         
         finish(logs: LogReaderOperation.processLogs(directoryURL: mainAppLogDirectory))
