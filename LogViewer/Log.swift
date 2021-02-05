@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Log {
+struct Log: Codable {
     let accounts: [Account]
     let calendars: [Calendar]
     let syncQueue: [SyncQueue]
@@ -25,7 +25,7 @@ struct Log {
     }
 }
 
-@objcMembers class Calendar: NSObject {
+@objcMembers class Calendar: NSObject, Codable {
     let name: String
     let identifier: String
     let numberOfEvents: Int
@@ -46,7 +46,7 @@ struct Log {
     }
 }
 
-@objcMembers class Account: NSObject {
+@objcMembers class Account: NSObject, Codable {
     private let string: String
     let name: String
     let identifier: String
@@ -68,7 +68,7 @@ struct Log {
     }
 }
 
-@objcMembers class SyncQueue: NSObject {
+@objcMembers class SyncQueue: NSObject, Codable {
     let name: String
     let identifier: String
     private let string: String
