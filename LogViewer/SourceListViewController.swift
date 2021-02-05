@@ -8,11 +8,13 @@
 import Cocoa
 
 @objcMembers class SourceListItem: NSObject {
-    dynamic let name: String
-    dynamic let type: SourceItemType
-    init(name: String, type: SourceItemType) {
+    let name: String
+    let type: SourceItemType
+    let image: NSImage
+    init(name: String, type: SourceItemType, image: NSImage) {
         self.name = name
         self.type = type
+        self.image = image
         super.init()
     }
 }
@@ -25,7 +27,7 @@ enum SourceItemType: Int {
 
 class SourceListViewController: NSViewController, NSTableViewDelegate {
     @IBOutlet weak var tableView: NSTableView!
-    @objc lazy dynamic var sourceListItems: [SourceListItem] = [SourceListItem(name: "Calendars", type: .calendar), SourceListItem(name: "Accounts", type: .account), SourceListItem(name: "Sync Queues", type: .syncQueue)]
+    @objc lazy dynamic var sourceListItems: [SourceListItem] = [SourceListItem(name: "Calendars", type: .calendar, image: #imageLiteral(resourceName: "Calendar")), SourceListItem(name: "Accounts", type: .account, image: #imageLiteral(resourceName: "Accounts")), SourceListItem(name: "Sync Queues", type: .syncQueue, image: #imageLiteral(resourceName: "Sync"))]
   
     override func viewDidLoad() {
         super.viewDidLoad()
