@@ -91,6 +91,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		012EB21125CCDC700048EC79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0151E93725CBA8A1003E6BB8 /* LogReaderOperation.swift */,
+				0151E94225CBB3C4003E6BB8 /* Log.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		012EB21225CCDC890048EC79 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0151E90A25CBA808003E6BB8 /* ViewController.swift */,
+				012EB20425CCB1040048EC79 /* MainWindowController.swift */,
+				012EB21425CCDCBC0048EC79 /* Master */,
+				012EB21325CCDCA60048EC79 /* Detail */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		012EB21325CCDCA60048EC79 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0151E95725CC1DC7003E6BB8 /* DetailTabViewController.swift */,
+				0151E95C25CC201D003E6BB8 /* AccountDetailViewController.swift */,
+				0151E96425CC2109003E6BB8 /* CalendarDetailViewController.swift */,
+				0151E96925CC2122003E6BB8 /* SyncQueueDetailViewController.swift */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		012EB21425CCDCBC0048EC79 /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				0151E95225CC11E0003E6BB8 /* SourceListViewController.swift */,
+			);
+			name = Master;
+			sourceTree = "<group>";
+		};
 		0151E8FC25CBA808003E6BB8 = {
 			isa = PBXGroup;
 			children = (
@@ -114,16 +153,9 @@
 		0151E90725CBA808003E6BB8 /* LogViewer */ = {
 			isa = PBXGroup;
 			children = (
+				012EB21125CCDC700048EC79 /* Model */,
+				012EB21225CCDC890048EC79 /* Controller */,
 				0151E90825CBA808003E6BB8 /* AppDelegate.swift */,
-				0151E93725CBA8A1003E6BB8 /* LogReaderOperation.swift */,
-				0151E94225CBB3C4003E6BB8 /* Log.swift */,
-				0151E90A25CBA808003E6BB8 /* ViewController.swift */,
-				0151E95225CC11E0003E6BB8 /* SourceListViewController.swift */,
-				0151E95725CC1DC7003E6BB8 /* DetailTabViewController.swift */,
-				0151E95C25CC201D003E6BB8 /* AccountDetailViewController.swift */,
-				0151E96425CC2109003E6BB8 /* CalendarDetailViewController.swift */,
-				0151E96925CC2122003E6BB8 /* SyncQueueDetailViewController.swift */,
-				012EB20425CCB1040048EC79 /* MainWindowController.swift */,
 				0151E90C25CBA80A003E6BB8 /* Assets.xcassets */,
 				0151E90E25CBA80A003E6BB8 /* Main.storyboard */,
 				0151E91125CBA80A003E6BB8 /* Info.plist */,
