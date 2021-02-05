@@ -51,6 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             alert.alertStyle = .warning
             alert.messageText = "Error in loading logs"
             alert.informativeText = "Could not parse logs quitting now"
+            alert.runModal()
             NSApp.terminate(nil)
         }
     }
