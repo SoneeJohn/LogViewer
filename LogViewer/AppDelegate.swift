@@ -59,6 +59,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
-
+    static func jsonDataFrom(_ log: Log) -> Data? {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        return try? encoder.encode(log)
+    }
+    
+    @IBAction func dropLogs(_ sender: NSMenuItem) {
+        guard let log = LogReaderClient.shared.logs?.first else { return }
+        
+        let savePanel = NSSavePanel()
+        savePanel.nameFieldStringValue = "Fantastical Logs.json"
+        savePanel.prompt = "Dump"
+        
+        guard savePanel.runModal() == .OK else { return }
+        guard let data = AppDelegate.jsonDataFrom(log) else { return }
+        guard let saveURL = savePanel.url else { return }
+        guard ((try? data.write(to: saveURL)) != nil) else { return }
+        
+        NSWorkspace.shared.activateFileViewerSelecting([saveURL])
+        
+    }
+    
 }
 
