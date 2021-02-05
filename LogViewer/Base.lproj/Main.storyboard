@@ -944,11 +944,35 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
+                            <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8d-GJ-5yQ">
+                                <rect key="frame" x="333" y="482" width="184" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="HVb-sH-Err"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="184" id="ZRT-gA-FRq"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="184" id="qYh-yK-G0U"/>
+                                </constraints>
+                                <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="9jd-BA-xDa">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <connections>
+                                        <binding destination="VC2-kh-u0C" name="predicate" keyPath="filterPredicate" id="8dN-YA-diT">
+                                            <dictionary key="options">
+                                                <string key="NSDisplayName">predicate</string>
+                                                <string key="NSPredicateFormat">self.name contains[cd] $value OR self.identifier contains[cd] $value OR self.framework contains[cd] $value</string>
+                                            </dictionary>
+                                        </binding>
+                                    </connections>
+                                </searchFieldCell>
+                            </searchField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="yzI-Jm-5E6" secondAttribute="bottom" id="2mj-gM-J1u"/>
+                            <constraint firstItem="yzI-Jm-5E6" firstAttribute="top" secondItem="p8d-GJ-5yQ" secondAttribute="bottom" constant="8" symbolic="YES" id="3Zc-mD-GEM"/>
+                            <constraint firstItem="p8d-GJ-5yQ" firstAttribute="leading" secondItem="tXv-4y-Ojg" secondAttribute="leading" constant="333" id="AiR-nN-0lI"/>
                             <constraint firstItem="yzI-Jm-5E6" firstAttribute="top" secondItem="tXv-4y-Ojg" secondAttribute="top" constant="49" id="IRx-MF-PL1"/>
                             <constraint firstItem="yzI-Jm-5E6" firstAttribute="leading" secondItem="tXv-4y-Ojg" secondAttribute="leading" id="Ndy-Gf-XGN"/>
+                            <constraint firstAttribute="trailing" secondItem="p8d-GJ-5yQ" secondAttribute="trailing" constant="20" symbolic="YES" id="ZyY-Ga-eCx"/>
                             <constraint firstAttribute="trailing" secondItem="yzI-Jm-5E6" secondAttribute="trailing" id="lBf-Os-S3H"/>
                         </constraints>
                     </view>
@@ -1120,10 +1144,33 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
+                            <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97e-zT-3Ld">
+                                <rect key="frame" x="399" y="344" width="184" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="nsH-t3-Okr"/>
+                                </constraints>
+                                <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="oMN-gm-aT8">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <connections>
+                                        <binding destination="Z9u-xT-OQg" name="predicate" keyPath="filterPredicate" id="YUy-AV-fsn">
+                                            <dictionary key="options">
+                                                <string key="NSDisplayName">predicate</string>
+                                                <string key="NSPredicateFormat">self.name contains[cd] $value OR self.identifier contains[cd] $value OR self.numberOfEvents.stringValue contains[cd] $value</string>
+                                            </dictionary>
+                                        </binding>
+                                    </connections>
+                                </searchFieldCell>
+                            </searchField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="rHD-Hf-MQi" secondAttribute="trailing" id="0mX-fi-Pen"/>
+                            <constraint firstItem="rHD-Hf-MQi" firstAttribute="top" secondItem="97e-zT-3Ld" secondAttribute="bottom" constant="8" symbolic="YES" id="28l-he-cQQ"/>
+                            <constraint firstItem="97e-zT-3Ld" firstAttribute="top" secondItem="5u7-V4-pcE" secondAttribute="top" constant="19" id="Cle-5l-TBu"/>
                             <constraint firstAttribute="bottom" secondItem="rHD-Hf-MQi" secondAttribute="bottom" id="Hw2-lv-Mhb"/>
+                            <constraint firstAttribute="trailing" secondItem="97e-zT-3Ld" secondAttribute="trailing" constant="20" symbolic="YES" id="Jso-pV-tmU"/>
+                            <constraint firstItem="97e-zT-3Ld" firstAttribute="leading" secondItem="5u7-V4-pcE" secondAttribute="leading" constant="399" id="lev-Cf-H0m"/>
                             <constraint firstItem="rHD-Hf-MQi" firstAttribute="top" secondItem="5u7-V4-pcE" secondAttribute="top" constant="49" id="rTw-Na-Baf"/>
                             <constraint firstItem="rHD-Hf-MQi" firstAttribute="leading" secondItem="5u7-V4-pcE" secondAttribute="leading" id="wpI-XQ-ubQ"/>
                         </constraints>
@@ -1257,12 +1304,36 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
+                            <searchField wantsLayer="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5B-od-DeJ">
+                                <rect key="frame" x="439" y="446" width="184" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="184" id="Drj-b6-Pev"/>
+                                    <constraint firstAttribute="width" constant="184" id="Pla-ON-bkr"/>
+                                </constraints>
+                                <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="s8x-Xs-gwR">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <connections>
+                                        <binding destination="LaG-9R-nom" name="predicate" keyPath="filterPredicate" id="oKs-AE-EMP">
+                                            <dictionary key="options">
+                                                <string key="NSDisplayName">predicate</string>
+                                                <string key="NSPredicateFormat">self.name contains[cd] $value OR self.identifier contains[cd] $value</string>
+                                            </dictionary>
+                                        </binding>
+                                    </connections>
+                                </searchFieldCell>
+                            </searchField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="iDu-PX-slB" secondAttribute="trailing" id="2Vz-Kc-hpp"/>
+                            <constraint firstAttribute="trailing" secondItem="U5B-od-DeJ" secondAttribute="trailing" constant="20" symbolic="YES" id="JM4-4z-bA2"/>
                             <constraint firstAttribute="bottom" secondItem="iDu-PX-slB" secondAttribute="bottom" id="Peg-aC-Rvt"/>
+                            <constraint firstItem="U5B-od-DeJ" firstAttribute="leading" secondItem="CKf-Oj-oWP" secondAttribute="leading" constant="439" id="R7J-Ou-KrE"/>
                             <constraint firstItem="iDu-PX-slB" firstAttribute="top" secondItem="CKf-Oj-oWP" secondAttribute="top" constant="49" id="Ua9-4t-0QZ"/>
                             <constraint firstItem="iDu-PX-slB" firstAttribute="leading" secondItem="CKf-Oj-oWP" secondAttribute="leading" id="Xfj-7Z-sSL"/>
+                            <constraint firstItem="U5B-od-DeJ" firstAttribute="top" secondItem="CKf-Oj-oWP" secondAttribute="top" constant="19" id="oRF-Fg-0cl"/>
+                            <constraint firstItem="iDu-PX-slB" firstAttribute="top" secondItem="U5B-od-DeJ" secondAttribute="bottom" constant="8" symbolic="YES" id="qHK-Ow-FHZ"/>
                         </constraints>
                     </view>
                 </viewController>
