@@ -12,16 +12,14 @@ class DetailTabViewController: NSTabViewController {
         return [AccountDetailViewController.loadFromStoryboard(), CalendarDetailViewController.loadFromStoryboard(), SyncQueueDetailViewController.loadFromStoryboard()]
     }()
     
-    private var addedDetailViewControllers: Bool = false
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         NotificationCenter.default.addObserver(forName: NSNotification.Name("SelectedSourceItemDidChanage"), object: nil, queue: .main) { [unowned self] (note) in
             guard let selectedSourceListItem = note.object as? SourceListItem else { return }
-            if self.addedDetailViewControllers == false {
-                self.detailViewControllers.forEach { (controller) in
-                    self.addTabViewItem(NSTabViewItem(viewController: controller))
-                }
+            self.detailViewControllers.forEach { (controller) in
+                self.addTabViewItem(NSTabViewItem(viewController: controller))
             }
             guard let selectedIndex = self.selectedIndexFor(selectedSourceListItem) else { return }
             self.tabView.selectTabViewItem(at: selectedIndex)
