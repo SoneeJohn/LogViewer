@@ -712,8 +712,8 @@
             <objects>
                 <splitViewController id="6Qe-Qe-rZf" sceneMemberID="viewController">
                     <splitViewItems>
-                        <splitViewItem canCollapse="YES" id="MOx-qR-GvQ"/>
-                        <splitViewItem canCollapse="YES" id="RE3-th-5W6"/>
+                        <splitViewItem canCollapse="YES" behavior="sidebar" id="MOx-qR-GvQ"/>
+                        <splitViewItem holdingPriority="249" behavior="contentList" id="RE3-th-5W6"/>
                     </splitViewItems>
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="n9l-CX-XX3">
                         <rect key="frame" x="0.0" y="0.0" width="475" height="300"/>
