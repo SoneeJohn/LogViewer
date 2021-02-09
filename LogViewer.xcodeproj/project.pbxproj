@@ -103,25 +103,25 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		012EB21125CCDC700048EC79 /* Model */ = {
+		012EB21125CCDC700048EC79 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				0151E93725CBA8A1003E6BB8 /* LogReaderOperation.swift */,
 				0151E94225CBB3C4003E6BB8 /* Log.swift */,
 			);
-			name = Model;
+			name = Models;
 			sourceTree = "<group>";
 		};
-		012EB21225CCDC890048EC79 /* Controller */ = {
+		012EB21225CCDC890048EC79 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0151E90A25CBA808003E6BB8 /* MainViewController.swift */,
 				012EB20425CCB1040048EC79 /* MainWindowController.swift */,
+				0151E90A25CBA808003E6BB8 /* MainViewController.swift */,
 				01136B4A25D2F0CC00B1A977 /* SplitViewWindowController.swift */,
 				012EB21425CCDCBC0048EC79 /* Master */,
 				012EB21325CCDCA60048EC79 /* Detail */,
 			);
-			name = Controller;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		012EB21325CCDCA60048EC79 /* Detail */ = {
@@ -166,8 +166,8 @@
 		0151E90725CBA808003E6BB8 /* LogViewer */ = {
 			isa = PBXGroup;
 			children = (
-				012EB21125CCDC700048EC79 /* Model */,
-				012EB21225CCDC890048EC79 /* Controller */,
+				012EB21125CCDC700048EC79 /* Models */,
+				012EB21225CCDC890048EC79 /* Controllers */,
 				01136B5225D2FB9700B1A977 /* Views */,
 				0151E90825CBA808003E6BB8 /* AppDelegate.swift */,
 				0151E90C25CBA80A003E6BB8 /* Assets.xcassets */,
