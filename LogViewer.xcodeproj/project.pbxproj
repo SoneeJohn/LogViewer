@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01136B4325D2E5B400B1A977 /* DropBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01136B4225D2E5B400B1A977 /* DropBox.swift */; };
+		01136B4B25D2F0CC00B1A977 /* SplitViewWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01136B4A25D2F0CC00B1A977 /* SplitViewWindowController.swift */; };
 		012EB20525CCB1040048EC79 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012EB20425CCB1040048EC79 /* MainWindowController.swift */; };
 		0151E90925CBA808003E6BB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0151E90825CBA808003E6BB8 /* AppDelegate.swift */; };
-		0151E90B25CBA808003E6BB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0151E90A25CBA808003E6BB8 /* ViewController.swift */; };
+		0151E90B25CBA808003E6BB8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0151E90A25CBA808003E6BB8 /* MainViewController.swift */; };
 		0151E90D25CBA80A003E6BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0151E90C25CBA80A003E6BB8 /* Assets.xcassets */; };
 		0151E91025CBA80A003E6BB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0151E90E25CBA80A003E6BB8 /* Main.storyboard */; };
 		0151E91C25CBA80A003E6BB8 /* LogViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0151E91B25CBA80A003E6BB8 /* LogViewerTests.swift */; };
@@ -42,10 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01136B4225D2E5B400B1A977 /* DropBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBox.swift; sourceTree = "<group>"; };
+		01136B4A25D2F0CC00B1A977 /* SplitViewWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewWindowController.swift; sourceTree = "<group>"; };
 		012EB20425CCB1040048EC79 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		0151E90525CBA808003E6BB8 /* LogViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0151E90825CBA808003E6BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0151E90A25CBA808003E6BB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0151E90A25CBA808003E6BB8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0151E90C25CBA80A003E6BB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0151E90F25CBA80A003E6BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0151E91125CBA80A003E6BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01136B5225D2FB9700B1A977 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				01136B4225D2E5B400B1A977 /* DropBox.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		012EB21125CCDC700048EC79 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,8 +115,9 @@
 		012EB21225CCDC890048EC79 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0151E90A25CBA808003E6BB8 /* ViewController.swift */,
+				0151E90A25CBA808003E6BB8 /* MainViewController.swift */,
 				012EB20425CCB1040048EC79 /* MainWindowController.swift */,
+				01136B4A25D2F0CC00B1A977 /* SplitViewWindowController.swift */,
 				012EB21425CCDCBC0048EC79 /* Master */,
 				012EB21325CCDCA60048EC79 /* Detail */,
 			);
@@ -155,6 +168,7 @@
 			children = (
 				012EB21125CCDC700048EC79 /* Model */,
 				012EB21225CCDC890048EC79 /* Controller */,
+				01136B5225D2FB9700B1A977 /* Views */,
 				0151E90825CBA808003E6BB8 /* AppDelegate.swift */,
 				0151E90C25CBA80A003E6BB8 /* Assets.xcassets */,
 				0151E90E25CBA80A003E6BB8 /* Main.storyboard */,
@@ -318,13 +332,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0151E93825CBA8A1003E6BB8 /* LogReaderOperation.swift in Sources */,
-				0151E90B25CBA808003E6BB8 /* ViewController.swift in Sources */,
+				01136B4325D2E5B400B1A977 /* DropBox.swift in Sources */,
+				0151E90B25CBA808003E6BB8 /* MainViewController.swift in Sources */,
 				0151E94325CBB3C4003E6BB8 /* Log.swift in Sources */,
 				0151E95D25CC201D003E6BB8 /* AccountDetailViewController.swift in Sources */,
 				012EB20525CCB1040048EC79 /* MainWindowController.swift in Sources */,
 				0151E90925CBA808003E6BB8 /* AppDelegate.swift in Sources */,
 				0151E96525CC2109003E6BB8 /* CalendarDetailViewController.swift in Sources */,
 				0151E96A25CC2122003E6BB8 /* SyncQueueDetailViewController.swift in Sources */,
+				01136B4B25D2F0CC00B1A977 /* SplitViewWindowController.swift in Sources */,
 				0151E95325CC11E0003E6BB8 /* SourceListViewController.swift in Sources */,
 				0151E95825CC1DC7003E6BB8 /* DetailTabViewController.swift in Sources */,
 			);

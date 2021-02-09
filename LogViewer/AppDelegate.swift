@@ -10,49 +10,24 @@ import Cocoa
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    var windowController: MainWindowController?
+    var mainWindowController: MainWindowController?
+    var splitViewWindowController: SplitViewWindowController?
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         
-        let alert = NSAlert()
-        alert.messageText = "Please open logs to load"
-        alert.informativeText = "Open the zip file to view logs."
-        alert.addButton(withTitle: "Open")
-        alert.addButton(withTitle: "Cancel")
-        guard alert.runModal() == .alertFirstButtonReturn else {
-            NSApp.terminate(nil)
-            return
-        }
+        self.mainWindowController = MainWindowController()
+        self.mainWindowController?.showWindow(nil)
         
-        let openPanel = NSOpenPanel()
-        openPanel.canChooseDirectories = false
-        openPanel.allowsMultipleSelection = false
-        openPanel.allowedFileTypes = ["zip"]
-        
-        guard openPanel.runModal() == .OK else {
-            NSApp.terminate(nil)
-            return
-        }
-        
-        guard let zipURL = openPanel.url else {
-            NSApp.terminate(nil)
-            return
-        }
-        
-        LogReaderClient.shared.fetchLogs(zipFileURLPath: zipURL) { [unowned self] (log) in
-            guard log == nil else {
-                self.windowController = MainWindowController.loadFromStoryboard()
-                self.windowController?.showWindow(nil)
-                return
-            }
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("LogsDidLoad"), object: nil, queue: .main) { [unowned self] (_) in
             
-            let alert = NSAlert()
-            alert.alertStyle = .warning
-            alert.messageText = "Error in loading logs"
-            alert.informativeText = "Could not parse logs quitting now"
-            alert.runModal()
-            NSApp.terminate(nil)
+            self.mainWindowController?.close()
+            
+            self.splitViewWindowController = SplitViewWindowController.loadFromStoryboard()
+            
+            NSApp.activate(ignoringOtherApps: true)
+            self.splitViewWindowController?.window?.makeKeyAndOrderFront(nil)
+            
         }
     }
 
